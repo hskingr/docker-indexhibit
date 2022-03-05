@@ -1,0 +1,42 @@
+version: '3.7'
+services:
+  indexhibit:
+    image: indexhibit:latest
+    # build: 
+      # context: .
+    container_name: indexhibit
+    # restart: unless-stopped
+    volumes: 
+      - $DATA_DIR/html:/var/www/html:rw
+      - $DATA_DIR/sites-available:/etc/apache2/sites-available:rw
+    environment:
+      - SITE_NAME
+      - USER_NAME
+      - USER_LAST_NAME
+      - EMAIL
+      - DATABASE_SERVER_ADDRESS
+      - MARIADB_DATABASE
+      - MARIADB_USER
+      - MARIADB_PASSWORD
+    ports:
+    - 8100:80
+    - 8120:443 
+  database:
+    image: mariadb:10.3
+    container_name: indexhibit-db
+    restart: always
+    environment:
+      - MARIADB_USER
+      - MARIADB_PASSWORD
+      - MARIADB_DATABASE
+      - MARIADB_ROOT_PASSWORD
+    volumes:
+      - ${DATA_DIR}/mysql:/var/lib/mysql
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: unless-stopped
+    environment:
+      ADMINER_DEFAULT_SERVER: indexhibit-db
+    ports:
+      - "8185:8080"

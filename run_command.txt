@@ -1,0 +1,20 @@
+//TEMP DOCKER RUN COMMAND
+docker run --rm -it -p 8100:80 -p 8120:443 --network="phpmysql_default" --name testphpwebserver \
+-v "/mnt/docker-container-data/php-apache/sites-available:/etc/apache2/sites-available" \
+-v "/mnt/docker-container-data/php-apache/www:/var/www/" \
+testphpwebserver:v1 bash
+
+//DETATCHED DOCKER RUN COMMAND
+docker run -d -it -p 8100:80 -p 8120:443 --network="phpmysql_default" --name testphpwebserver \
+-v "/mnt/docker-container-data/php-apache/sites-available:/etc/apache2/sites-available" \
+-v "/mnt/docker-container-data/php-apache/www:/var/www/" \
+testphpwebserver:v1 bash
+
+docker build /mnt/docker-container-data/php-apache -t testphpwebserver:v1
+
+
+docker run -rm --name indexhibit indexhibit && do
+cker exec -it indexhibit bash
+
+docker run -it -p 8100:80 --env-file .env --rm indexhibit bash
+docker run -p 8100:80 --env-file .env --rm indexhibit
