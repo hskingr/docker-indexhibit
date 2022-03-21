@@ -1,6 +1,6 @@
 www/
 container-data/
 dev/
-.env
 .extra
+.env
 indexhibit-dev
