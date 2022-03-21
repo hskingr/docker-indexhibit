@@ -204,28 +204,6 @@ class Installation
 		{
 			if (!file_exists(DIRNAME . '/ndxzsite/config/config.php'))
 			{
-				echo $_SERVER['SITE_NAME'];
-				echo $_SERVER['USER_NAME'];
-				echo $_SERVER['USER_LAST_NAME'];
-				echo $_SERVER['EMAIL'];
-				echo $_SERVER['DATABASE_SERVER_ADDRESS'];
-				echo $_SERVER['MARIADB_USER'];
-				echo $_SERVER['MARIADB_PASSWORD'];
-				echo $_SERVER['MARIADB_DATABASE'];
-				echo $_SERVER['MARIADB_ROOT_PASSWORD'];
-				echo $_SERVER['DATA_DIR'];
-
-				echo $_SERVER['SITE_NAME'];
-				echo $_SERVER['USER_NAME'];
-				echo $_SERVER['USER_LAST_NAME'];
-				echo $_SERVER['EMAIL'];
-				echo $_SERVER['DATABASE_SERVER_ADDRESS'];
-				echo $_SERVER['MARIADB_USER'];
-				echo $_SERVER['MARIADB_PASSWORD'];
-				echo $_SERVER['MARIADB_DATABASE'];
-				echo $_SERVER['MARIADB_ROOT_PASSWORD'];
-				echo $_SERVER['DATA_DIR'];
-
 				// do not display if we have already upgraded
 				$this->html = "<div id='log-form'>\n";
 				$this->html .= "<form name='iform' method='post'>\n";
