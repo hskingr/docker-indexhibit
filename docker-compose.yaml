@@ -32,11 +32,3 @@ services:
       - MARIADB_ROOT_PASSWORD
     volumes:
       - ${DATA_DIR}/mysql:/var/lib/mysql
-  # adminer:
-  #   container_name: adminer
-  #   image: adminer
-  #   restart: unless-stopped
-  #   environment:
-  #     ADMINER_DEFAULT_SERVER: indexhibit-db
-  #   ports:
-  #     - "8185:8080"
