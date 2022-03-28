@@ -1,3 +1,5 @@
+ ![Indexhibit Backend](./docs/backend.png)
+
 ## Getting Started
 
 There is a template `.env.example` file available in the repo. Rename the file to `.env` and add in your values for the docker-compose file to read. The recommended deployment option is to use the `docker-compose.yaml` file provided. If you have another mysql/mariadb server that you would like to use, make sure you change the environment values and remove the db portion in the docker-compose.
@@ -17,6 +19,12 @@ Then do:
 Once the containers have started, go to your browser and follow the setup instructions for the CMS. Some of the environment variables have already been added to the input fields to minimise error and provide convienience. The address to finish the setup is:
 
 `http://<yourAddress>/ndxzstudio/install.php`
+
+The environment variables should passthrough to the setup so you should not have to configure anything apart from clicking the submit button.
+
+ ![Indexhibit Backend](./docs/env_vars.png)
+
+
 
 ### docker-compose
 
