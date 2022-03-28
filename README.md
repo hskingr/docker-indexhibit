@@ -16,7 +16,7 @@ Then do:
 
 Once the containers have started, go to your browser and follow the setup instructions for the CMS. Some of the environment variables have already been added to the input fields to minimise error and provide convienience. The address to finish the setup is:
 
-`http://<yourAddress>/nxzstudio/install.php`
+`http://<yourAddress>/ndxzstudio/install.php`
 
 ### docker-compose
 
